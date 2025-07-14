@@ -1,0 +1,118 @@
+/* index.html */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Planet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Daily Planet</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">World</a></li>
+        <li><a href="#">Politics</a></li>
+        <li><a href="#">Business</a></li>
+        <li><a href="#">Tech</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="news">
+      <article>
+        <h2>Breaking: Major Event Rocks Metropolis</h2>
+        <p class="date">July 14, 2025</p>
+        <p>The city of Metropolis was shaken today by an unexpected event that left citizens in awe. Full details inside.</p>
+        <button onclick="readMore(this)">Read more</button>
+      </article>
+      <article>
+        <h2>Tech Advances: New AI Assistant Unveiled</h2>
+        <p class="date">July 13, 2025</p>
+        <p>A breakthrough in artificial intelligence promises to revolutionize the industry. Here's what you need to know.</p>
+        <button onclick="readMore(this)">Read more</button>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Daily Planet. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  padding: 1rem;
+}
+
+.news article {
+  background: white;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.news h2 {
+  margin-top: 0;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #222;
+  color: #fff;
+}
+
+/* script.js */
+function readMore(button) {
+  alert("Full article coming soon!");
+}
