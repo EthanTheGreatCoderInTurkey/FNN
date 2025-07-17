@@ -1,118 +1,129 @@
-/* index.html */
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daily Planet</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Future News Network (FNN)</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #0a0a23;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #1a1a3d;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      padding: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background-color: #333;
+    }
+    .hero {
+      background: url('https://via.placeholder.com/1200x400') center/cover no-repeat;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2em;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px #000;
+    }
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      gap: 20px;
+      justify-content: center;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: 300px;
+      padding: 15px;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 5px;
+    }
+    .card h3 {
+      margin-top: 10px;
+    }
+    footer {
+      background-color: #0a0a23;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+    @media (max-width: 600px) {
+      .hero {
+        font-size: 1.5em;
+        height: 250px;
+      }
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Daily Planet</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">World</a></li>
-        <li><a href="#">Politics</a></li>
-        <li><a href="#">Business</a></li>
-        <li><a href="#">Tech</a></li>
-      </ul>
-    </nav>
+    <h1>Future News Network</h1>
+    <p id="date"></p>
   </header>
-  
-  <main>
-    <section class="news">
-      <article>
-        <h2>Breaking: Major Event Rocks Metropolis</h2>
-        <p class="date">July 14, 2025</p>
-        <p>The city of Metropolis was shaken today by an unexpected event that left citizens in awe. Full details inside.</p>
-        <button onclick="readMore(this)">Read more</button>
-      </article>
-      <article>
-        <h2>Tech Advances: New AI Assistant Unveiled</h2>
-        <p class="date">July 13, 2025</p>
-        <p>A breakthrough in artificial intelligence promises to revolutionize the industry. Here's what you need to know.</p>
-        <button onclick="readMore(this)">Read more</button>
-      </article>
-    </section>
-  </main>
-
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">World</a>
+    <a href="#">Tech</a>
+    <a href="#">Politics</a>
+    <a href="#">Science</a>
+    <a href="#">Contact</a>
+  </nav>
+  <div class="hero">
+    Breaking News: The Future Is Now
+  </div>
+  <section class="content">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200" alt="News Image">
+      <h3>AI Revolutionizes Journalism</h3>
+      <p>Artificial Intelligence is transforming how news is gathered, written, and delivered.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200" alt="News Image">
+      <h3>Space Tourism Takes Off</h3>
+      <p>Private companies launch civilians into orbit, marking a new era in space travel.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200" alt="News Image">
+      <h3>Climate Tech Breakthrough</h3>
+      <p>New carbon capture technology promises to reverse global warming trends.</p>
+    </div>
+  </section>
   <footer>
-    <p>&copy; 2025 Daily Planet. All rights reserved.</p>
+    &copy; 2025 Future News Network | All rights reserved
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // Display current date
+    const dateElement = document.getElementById('date');
+    const today = new Date();
+    dateElement.textContent = today.toDateString();
+  </script>
 </body>
 </html>
-
-/* style.css */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f4f4f4;
-}
-
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
-}
-
-header h1 {
-  margin: 0;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  padding: 0;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-}
-
-main {
-  padding: 1rem;
-}
-
-.news article {
-  background: white;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.news h2 {
-  margin-top: 0;
-}
-
-button {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 3px;
-}
-
-button:hover {
-  background-color: #555;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #222;
-  color: #fff;
-}
-
-/* script.js */
-function readMore(button) {
-  alert("Full article coming soon!");
-}
