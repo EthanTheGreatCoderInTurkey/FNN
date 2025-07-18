@@ -3,163 +3,112 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="images/fnn-logo.png">
+ 
   <title>Future News Network (FNN)</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Roboto, sans-serif;
-      background-color: #f5f7fa;
-      color: #333;
-    }
-
-    header {
-      background: linear-gradient(to right, #0d47a1, #1976d2);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #002858;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: white;
-      padding: 15px 25px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s;
-    }
-
-    nav a:hover {
-      background-color: #1b3a70;
-    }
-
-    .hero {
-      background: url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-      height: 400px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 2.5em;
-      font-weight: 800;
-      text-shadow: 3px 3px 12px #000;
-      box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.4);
-    }
-
-    .content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      padding: 40px;
-      justify-content: center;
-    }
-
-    .card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      width: 320px;
-      overflow: hidden;
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .card h3 {
-      margin: 20px 15px 10px;
-      font-size: 1.2em;
-      color: #0d47a1;
-    }
-
-    .card p {
-      margin: 0 15px 20px;
-      font-size: 0.95em;
-      line-height: 1.5;
-      color: #555;
-    }
-
-    footer {
-      background-color: #002858;
-      color: white;
-      text-align: center;
-      padding: 25px;
-      margin-top: 50px;
-      font-size: 0.9em;
-    }
-
-    @media (max-width: 600px) {
-      .hero {
-        font-size: 1.5em;
-        height: 250px;
-      }
-      nav {
-        flex-direction: column;
-      }
-      .content {
-        padding: 20px;
-      }
-    }
-  </style>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Future News Network</h1>
-    <p id="date"></p>
+  <header class="navbar">
+    <div class="navbar-left">
+      <img src="favicon.png" alt="FNN Logo" class="logo" />
+      <h1 class="brand">Future News Network</h1>
+    </div>
+    <div class="navbar-right">
+      <input type="text" class="search-bar" placeholder="Search news...">
+      <button id="darkModeToggle">🌓</button>
+    </div>
   </header>
 
-  <nav>
+  <nav class="nav-menu">
     <a href="#">Home</a>
-    <a href="#">World</a>
-    <a href="#">Tech</a>
-    <a href="#">Politics</a>
-    <a href="#">Science</a>
-    <a href="#">Contact</a>
+    <a href="#features">Features</a>
+    <a href="#sports">Sports</a>
+    <a href="#entertainment">Entertainment</a>
+    <a href="#tech">Technology</a>
+    <a href="#about">About</a>
   </nav>
 
-  <div class="hero">
-    Breaking News: The Future Is Now
-  </div>
-
-  <section class="content">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=800&q=80" alt="AI News">
-      <h3>AI Revolutionizes Journalism</h3>
-      <p>Artificial Intelligence is transforming how news is gathered, analyzed, and delivered—ushering in a new era of digital reporting.</p>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1600243784572-77181c05cd5b?auto=format&fit=crop&w=800&q=80" alt="Space Tourism">
-      <h3>Space Tourism Takes Off</h3>
-      <p>Private ventures propel civilians into orbit, opening the gateway to cosmic exploration for the public sector.</p>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1616587895852-f47e7fd8c3ff?auto=format&fit=crop&w=800&q=80" alt="Climate Technology">
-      <h3>Climate Tech Breakthrough</h3>
-      <p>Innovative carbon capture tech could tip the scales in humanity’s fight against climate change. Experts weigh in on its impact.</p>
+  <section class="hero">
+    <div class="slideshow">
+      <img src="https://source.unsplash.com/1600x600/?newsroom,media" alt="News Slideshow">
     </div>
   </section>
 
-  <footer>
-    &copy; 2025 Future News Network | All rights reserved
-  </footer>
+  <section class="features" id="features">
+    <h2>Top Headlines</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x250/?breaking-news" alt="Breaking News">
+        <h3>World News Roundup</h3>
+        <p>Get the latest global headlines from politics to climate developments.</p>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x250/?ai,tech" alt="Tech">
+        <h3>AI Transforms Newsrooms</h3>
+        <p>Discover how artificial intelligence is revolutionizing media reporting.</p>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    // Display current date
-    const dateElement = document.getElementById('date');
-    const today = new Date();
-    dateElement.textContent = today.toDateString();
-  </script>
+  <section class="content" id="sports">
+    <h2>Sports</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x250/?cricket,stadium" alt="Cricket">
+        <h3>India vs England T20</h3>
+        <p>Latest match summary, player performances, and behind-the-scenes stories.</p>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x250/?football,goal" alt="Football">
+        <h3>Transfer Season Updates</h3>
+        <p>Who's in, who's out — your complete guide to this transfer window.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content" id="entertainment">
+    <h2>Entertainment</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x250/?movie,cinema" alt="Movies">
+        <h3>Summer Blockbusters</h3>
+        <p>Reviewing the biggest hits and misses of this year’s movie season.</p>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x250/?concert,celebrity" alt="Celebrity">
+        <h3>Music & Celebs</h3>
+        <p>What are your favorite stars up to? Gossip, tours and exclusives!</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content" id="tech">
+    <h2>Technology</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x250/?coding,software" alt="Tech">
+        <h3>Software Trends</h3>
+        <p>Explore the changing landscape of tech in 2025: AI, VR and more.</p>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x250/?startups,innovation" alt="Innovation">
+        <h3>Startups to Watch</h3>
+        <p>These new companies are shaping the future — and fast.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>Future News Network (FNN) is powered by students of SSFI — bringing you the latest in sports, entertainment, and tech from a youthful perspective. Visit our <a href="https://www.youtube.com/@ssfi_official" target="_blank">YouTube Channel</a> to watch the daily broadcast.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Future News Network | Built by SSFI Students</p>
+  </footer>
 </body>
 </html>
+
