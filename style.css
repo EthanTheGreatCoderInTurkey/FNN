@@ -215,6 +215,19 @@ footer {
   cursor: pointer;
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  border-radius: 12px;
+}
+
+
 @media (max-width: 600px) {
   .card-grid {
     flex-direction: column;
